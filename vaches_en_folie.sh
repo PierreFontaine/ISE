@@ -5,7 +5,7 @@
 #------------------------------------------------------
 
 # Remplacer les noms par les vôtres
-auteurs="B. Jobard et E. Muhammad"
+auteurs="P. Fontaine et C. Cambon"
 
 # Les fichiers générés par le script
 fichier_rst="vaches_en_folie.rst"
@@ -84,8 +84,23 @@ cowsay -f ./mascottej.cow "Je suis la mascotte de ${auteurs}" | awk '{printf " %
 
 # Génération des formats HTML et PDF
 
-echo "Génération de ${fichier_html}"
-rst2html -d -t -s ${fichier_rst} ${fichier_html}
+echo "Génération de ${fichier_html} avec python"
+rst2html.py -d -t -s ${fichier_rst} ${fichier_html}
+if [[ $? != 0 ]]; then
+	rst2html -d -t -s ${fichier_rst} ${fichier_html}
+fi
 
-echo "Génération de ${fichier_pdf}"
-rst2pdf           ${fichier_rst} ${fichier_pdf}
+echo "Génération de ${fichier_pdf} avec python"
+rst2pdf.py ${fichier_rst} ${fichier_pdf}
+if [[ $? != 0 ]]; then
+	echo "Génération de ${fichier_pdf}"
+	rst2pdf ${fichier_rst} ${fichier_pdf}
+	if [[ $? != 0 ]]; then
+		echo "on dirait bien qu'il y ait un bug !"
+	fi
+fi
+
+
+
+
+
