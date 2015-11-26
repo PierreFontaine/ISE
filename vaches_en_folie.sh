@@ -5,7 +5,7 @@
 #------------------------------------------------------
 
 # Remplacer les noms par les vôtres
-auteurs="P. Fontaine et C. Cambon"
+auteurs="P. Fontaine et A. Cambon"
 
 # Les fichiers générés par le script
 fichier_rst="vaches_en_folie.rst"
