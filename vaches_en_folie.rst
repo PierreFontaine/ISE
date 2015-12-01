@@ -5,7 +5,7 @@ Vaches en folie
 Projet d\'Introduction aux Systèmes d\'Exploitations
 ----------------------------------------------------
 
-:Auteurs: *P. Fontaine et C. Cambon*
+:Auteurs: *A.Cambon et P.Fontaine*
 :Généré par: *pierrefontaine*
 
 Ce document a été généré  à partir du fichier ``vaches_en_folie.rst`` au
@@ -27,37 +27,83 @@ documents générés ressemblent le plus fidèlement possible au modèle fourni.
 Une vache : Définition
 ======================
 
-**Vache** est ... Vache se dit *cow* in English.
+**Vache** est le nom vernaculaire donné à la femelle du **taureau** et à la mère du **veau** des bovins. C\'est un
+ruminant appartenant à la famille des bovidés, généralement porteur de cornes sur le front. Une **génisse**
+ou **vachette** est une vache qui n\'a pas vêlé. La vache *beugle*, *meugle* ou *mugit* tout en produisant du lait
+et des bouses. Vache se dit *cow* in English.
+
+.. figure:: http://i.imgur.com/yIBMMzL.jpg
+   :scale: 200 %
+   :alt: map to buried treasure
+
+   **Figure :** Trois normandes devisent du sens de la vie sous les poiriers en fleurs.
+
 
 Quelques races bovines
 ----------------------
-+----------------------------------+-------------------------------------+
-| **Races et liens vers site web** | **Images**                          |
-+==================================+=====================================+
-| Lien vers la Lourdaise           | Insérer l\'image ici                |
-+----------------------------------+-------------------------------------+
++------------------------------------------------+--------------------------------------------+
+| **Races et liens vers site web**               | **Images**                                 |
++================================================+============================================+
+| La Lourdaise_                                  | .. image:: http://i.imgur.com/rsgjo74.jpg  |
+|				                 | 	:scale: 105%                          |
++------------------------------------------------+--------------------------------------------+
+| La Normande_                                   | .. image:: http://i.imgur.com/2y9VGy8.jpg  |
+|				                 | 	:scale: 105%                          |
++------------------------------------------------+--------------------------------------------+
+
+.. _Lourdaise: http://bit.ly/Race_Lourdaise
+.. _Normande: http://bit.ly/Race_Normande   
+
+Vaches et systèmes d\'exploitation
+==================================
+
+Sous **GNU/Linux**, les vaches peuvent s\'exprimer avec les commandes ``cowthink`` et ``cowsay``.
 
 Transformation bovine
 =====================
 **Les vaches sont coquettes !**
 
+
+.. sidebar:: Indications
+
+   	les quatres vignette sutilisent la vache par défaut de la commande ``cowsay``. Les différences
+	sont obtenues en filtrant le flux de sortie pour remplacer des caractères par d\'autres. Votre
+	mission consiste à élaborer une succession de filtres qui reproduise les vignettes au caractère
+	près.
+                                   
+
+
+
 ::
 
-..____________________________....... _________________________________ 
-.<.Je.suis.dans.le.brouillard.>......< On ne m'a pas encore filtrée ! >
-..----------------------------....... --------------------------------- 
-.........\...^__^....................        \   ^__^
-..........\..(oo)\_______............         \  (oo)\_______
-.............(__)\.......)\/\........            (__)\       )\/\
-.................||----w.|...........                ||----w |
-.................||.....||...........                ||     ||
+  _____________________________     : ~~~~~~~~~~~~~~~~~~ 
+ < Je suis une vache originale >    :< On m'a filtrée  >
+  -----------------------------     : ------------------ 
+         \   ^__^                   :        \   o~~o
+          \  (oo)\_______           :         \  {^^}\~~~~~~~
+             (__)\       )\/\       :            {~~}\       }\/\
+                 ||----w |          :                11----w 1
+                 ||     ||          :                11     11
+
+
+
+::
+
+  _____________________________     : ~~~~~~~~~~~~~~~~~~ 
+ < Je suis une vache originale >    :< On m'a filtrée  >
+  -----------------------------     : ------------------ 
+         \   ^__^                   :        \   ^~~^
+          \  (oo)\_______           :         \  (^^)\~~~~~~~
+             (__)\       )\/\       :            (~~)\       )\/\
+                 ||----w |          :                11----w 1
+                 ||     ||          :                11     11
 
 Mascotte personnelle
 ====================
 
 ::
 
-  _______________________________________ 
- / Je suis la mascotte de P. Fontaine et \
- \ C. Cambon                             /
-  --------------------------------------- 
+  ____________________________________   
+ / Je suis la mascotte de A.Cambon et \  
+ \ P.Fontaine                         /  
+  ------------------------------------   

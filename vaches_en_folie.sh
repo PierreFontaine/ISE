@@ -5,7 +5,7 @@
 #------------------------------------------------------
 
 # Remplacer les noms par les vôtres
-auteurs="P. Fontaine et A. Cambon"
+auteurs="A.Cambon et P.Fontaine"
 
 # Les fichiers générés par le script
 fichier_rst="vaches_en_folie.rst"
@@ -46,29 +46,71 @@ documents générés ressemblent le plus fidèlement possible au modèle fourni.
 Une vache : Définition
 ======================
 
-**Vache** est ... Vache se dit *cow* in English.
+**Vache** est le nom vernaculaire donné à la femelle du **taureau** et à la mère du **veau** des bovins. C\'est un
+ruminant appartenant à la famille des bovidés, généralement porteur de cornes sur le front. Une **génisse**
+ou **vachette** est une vache qui n\'a pas vêlé. La vache *beugle*, *meugle* ou *mugit* tout en produisant du lait
+et des bouses. Vache se dit *cow* in English.
+
+.. figure:: http://i.imgur.com/yIBMMzL.jpg
+   :scale: 200 %
+   :alt: map to buried treasure
+
+   **Figure :** Trois normandes devisent du sens de la vie sous les poiriers en fleurs.
+
 
 Quelques races bovines
 ----------------------
-+----------------------------------+-------------------------------------+
-| **Races et liens vers site web** | **Images**                          |
-+==================================+=====================================+
-| Lien vers la Lourdaise           | Insérer l\'image ici                |
-+----------------------------------+-------------------------------------+
++------------------------------------------------+--------------------------------------------+
+| **Races et liens vers site web**               | **Images**                                 |
++================================================+============================================+
+| La Lourdaise_                                  | .. image:: http://i.imgur.com/rsgjo74.jpg  |
+|				                 | 	:scale: 105%                          |
++------------------------------------------------+--------------------------------------------+
+| La Normande_                                   | .. image:: http://i.imgur.com/2y9VGy8.jpg  |
+|				                 | 	:scale: 105%                          |
++------------------------------------------------+--------------------------------------------+
+
+.. _Lourdaise: http://bit.ly/Race_Lourdaise
+.. _Normande: http://bit.ly/Race_Normande   
+
+Vaches et systèmes d\'exploitation
+==================================
+
+Sous **GNU/Linux**, les vaches peuvent s\'exprimer avec les commandes \`\`cowthink\`\` et \`\`cowsay\`\`.
 
 Transformation bovine
 =====================
 **Les vaches sont coquettes !**
 
+
+.. sidebar:: Indications
+
+   	les quatres vignette sutilisent la vache par défaut de la commande \`\`cowsay\`\`. Les différences
+	sont obtenues en filtrant le flux de sortie pour remplacer des caractères par d\'autres. Votre
+	mission consiste à élaborer une succession de filtres qui reproduise les vignettes au caractère
+	près.
+                                   
+
+
+
 ::
 
 BLOC
-cowsay "Je suis dans le brouillard" | awk '{printf " %-35s\n", $0}' | tr ' ' '.'  > vache0.txt
-cowsay "On ne m'a pas encore filtrée !"  > vache1.txt
-paste -d'.' vache0.txt vache1.txt >> ${fichier_rst}
+cowsay "Je suis une vache originale" | awk '{printf " %-35s\n", $0}'  > vache0.txt
+cowsay "On m'a filtrée " | tr "_" "~" |tr "o" "x" | tr "^" "o" | tr "x" "^" | tr "|" "1" | tr "(" "{" | tr ")" "}" > vache1.txt
+paste -d':' vache0.txt vache1.txt >> ${fichier_rst}
+#---
+cat >> ${fichier_rst}  << BLOC
+
+
+
+::
+
+BLOC
+cowsay "Je suis une vache originale" | awk '{printf " %-35s\n", $0}'  > vache0.txt
+cowsay "On m'a filtrée " | tr "_" "~" | tr "^" "o" | tr "o" "^" | tr "|" "1"  > vache1.txt
+paste -d':' vache0.txt vache1.txt >> ${fichier_rst}
 rm -f vache*.txt
-
-
 
 #---
 cat >> ${fichier_rst}  << BLOC
@@ -79,28 +121,13 @@ Mascotte personnelle
 ::
 
 BLOC
-cowsay -f ./mascottej.cow "Je suis la mascotte de ${auteurs}" | awk '{printf " %-40s\n", $0}' >> ${fichier_rst}
+cowsay -f ./mascotte.cow "Je suis la mascotte de ${auteurs}" | awk '{printf " %-40s\n", $0}' >> ${fichier_rst}
 
 
 # Génération des formats HTML et PDF
 
-echo "Génération de ${fichier_html} avec python"
+echo "Génération de ${fichier_html}"
 rst2html.py -d -t -s ${fichier_rst} ${fichier_html}
-if [[ $? != 0 ]]; then
-	rst2html -d -t -s ${fichier_rst} ${fichier_html}
-fi
 
-echo "Génération de ${fichier_pdf} avec python"
-rst2pdf.py ${fichier_rst} ${fichier_pdf}
-if [[ $? != 0 ]]; then
-	echo "Génération de ${fichier_pdf}"
-	rst2pdf ${fichier_rst} ${fichier_pdf}
-	if [[ $? != 0 ]]; then
-		echo "on dirait bien qu'il y ait un bug !"
-	fi
-fi
-
-
-
-
-
+#echo "Génération de ${fichier_pdf}"
+#rst2pdf ${fichier_rst} ${fichier_pdf}
