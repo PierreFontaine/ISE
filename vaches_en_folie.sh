@@ -97,7 +97,7 @@ Transformation bovine
 
 BLOC
 cowsay "Je suis une vache originale" | awk '{printf " %-35s\n", $0}'  > vache0.txt
-cowsay "On m'a filtrée " | tr "_" "~" |tr "o" "x" | tr "^" "o" | tr "x" "^" | tr "|" "1" | tr "(" "{" | tr ")" "}" > vache1.txt
+cowsay "On m'a filtrée " | tr "_" "~" |tr "o" "x" | tr "^" "o" | tr "x" "^" | tr "|" "1" | tr "(" "{" | tr ")" "}" | tr "-" "~"> vache1.txt
 paste -d':' vache0.txt vache1.txt >> ${fichier_rst}
 #---
 cat >> ${fichier_rst}  << BLOC
@@ -107,8 +107,8 @@ cat >> ${fichier_rst}  << BLOC
 ::
 
 BLOC
-cowsay "Je suis une vache originale" | awk '{printf " %-35s\n", $0}'  > vache0.txt
-cowsay "On m'a filtrée " | tr "_" "~" | tr "^" "o" | tr "o" "^" | tr "|" "1"  > vache1.txt
+cowsay "A moi les nouvelles mamelles !" | awk '{printf " %-35s\n", $0}'|tr "-" "~" | tr "_" "~"| tr "(" "{" | tr ")" "}" | tr "|" "1" | tr "w" "u" | tr "^" "n" | tr "o" "*"  > vache0.txt
+cowsay "Une queue de lapin ?! " | tr "_" "~" | tr "<>\\()" "{}o"  > vache1.txt
 paste -d':' vache0.txt vache1.txt >> ${fichier_rst}
 rm -f vache*.txt
 
@@ -127,7 +127,7 @@ cowsay -f ./mascotte.cow "Je suis la mascotte de ${auteurs}" | awk '{printf " %-
 # Génération des formats HTML et PDF
 
 echo "Génération de ${fichier_html}"
-rst2html.py -d -t -s ${fichier_rst} ${fichier_html}
+rst2html -d -t -s ${fichier_rst} ${fichier_html}
 
-#echo "Génération de ${fichier_pdf}"
-#rst2pdf ${fichier_rst} ${fichier_pdf}
+echo "Génération de ${fichier_pdf}"
+rst2pdf ${fichier_rst} ${fichier_pdf}
