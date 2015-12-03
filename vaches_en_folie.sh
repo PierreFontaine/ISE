@@ -97,7 +97,7 @@ Transformation bovine
 
 BLOC
 cowsay "Je suis une vache originale" | awk '{printf " %-35s\n", $0}'  > vache0.txt
-cowsay "On m'a filtrée " | tr "_" "~" |tr "o" "x" | tr "^" "o" | tr "x" "^" | tr "|" "1" | tr "(" "{" | tr ")" "}" | tr "-" "~"> vache1.txt
+cowsay "On m'a filtrée " | tr "_" "~" |tr "o" "x" | tr "^" "o" | tr "x" "^" | tr "|" "1" | tr "(" "{" | tr ")" "}" | tr "-" "~"| tr "~" "-"> vache1.txt
 paste -d':' vache0.txt vache1.txt >> ${fichier_rst}
 #---
 cat >> ${fichier_rst}  << BLOC
@@ -107,12 +107,40 @@ cat >> ${fichier_rst}  << BLOC
 ::
 
 BLOC
-cowsay "A moi les nouvelles mamelles !" | awk '{printf " %-35s\n", $0}'|tr "-" "~" | tr "_" "~"| tr "(" "{" | tr ")" "}" | tr "|" "1" | tr "w" "u" | tr "^" "n" | tr "o" "*"  > vache0.txt
-cowsay "Une queue de lapin ?! " | tr "_" "~" | tr "<>\\()" "{}o"  > vache1.txt
+cowsay "A moi les nouvelles mamelles !" | awk '{printf " %-35s\n", $0}'|tr "-" "~" | tr "_" "~"| tr "(" "{" | tr ")" "}" | tr "|" "1" | tr "w" "u" | tr "^" "n" | sed s/oo/**/ | sed s/~~~~u/~~~uu/ |tr "~" "-"  > vache0.txt
+cowthink "Une queue de lapin ?! " | tr "_" "~" |tr "~" "-"| tr "^" "n" | sed s/oo/oO/ | cut -c '-26' | sed -e 's/\\/@/2' | tr '|' '1' | tr '(' '{' | tr ')' '}' > vache1.txt
 paste -d':' vache0.txt vache1.txt >> ${fichier_rst}
 rm -f vache*.txt
 
 #---
+cat >> ${fichier_rst}  << BLOC
+
+.. note::
+	**Attention !**
+
+	Veuillez noter que chaque ligne de chaque vignette doit commencer par un espace.
+::
+
+Ambition bacterienne
+====================
+
+C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**...
+
+.. sidebar:: Indications
+
+   	L\'option -f permet de choisir le personnage qui parle ou pense. Tous les fichiers sont
+	disponibles dans le dossier /usr/share/cowsay/cows/.
+
+
+::
+
+BLOC
+
+	cowthink -f bud-frogs  | awk '{printf " %-35s\n", $0}'|tr "-" "~" | tr "_" "~"| tr "(" "{" | tr ")" "}" | tr "|" "1" | tr "w" "u" | tr "^" "n" | sed s/oo/**/ | sed s/~~~~u/~~~uu/ |tr "~" "-"  >> ${fichier_rst}
+	rm -f vache*.txt
+
+	#---
+
 cat >> ${fichier_rst}  << BLOC
 
 Mascotte personnelle
@@ -121,7 +149,7 @@ Mascotte personnelle
 ::
 
 BLOC
-cowsay -f ./mascotte.cow "Je suis la mascotte de ${auteurs}" | awk '{printf " %-40s\n", $0}' >> ${fichier_rst}
+cowsay -fd ./mascotte.cow "Je suis la mascotte de ${auteurs}" | awk '{printf " %-40s\n", $0}' >> ${fichier_rst}
 
 
 # Génération des formats HTML et PDF
