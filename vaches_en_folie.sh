@@ -121,7 +121,7 @@ cat >> ${fichier_rst}  << BLOC
 	Veuillez noter que chaque ligne de chaque vignette doit commencer par un espace.
 ::
 
-Ambition bacterienne
+Ambition batracienne
 ====================
 
 C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**...
@@ -129,16 +129,17 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
 .. sidebar:: Indications
 
    	L\'option -f permet de choisir le personnage qui parle ou pense. Tous les fichiers sont
-	disponibles dans le dossier /usr/share/cowsay/cows/.
+	disponibles dans le dossier /usr/share/cowsay/cows/. #formater
 
 
 ::
 
 BLOC
 
-	cowthink -f bud-frogs  | awk '{printf " %-35s\n", $0}'|tr "-" "~" | tr "_" "~"| tr "(" "{" | tr ")" "}" | tr "|" "1" | tr "w" "u" | tr "^" "n" | sed s/oo/**/ | sed s/~~~~u/~~~uu/ |tr "~" "-"  >> ${fichier_rst}
-	rm -f vache*.txt
+	cowsay " Je suis le plus gros des crapauds !"| awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
+	cowsay -f bud-frogs "" | awk '{printf " %-35s\n", $0}'>> ${fichier_rst}
 
+	rm vacheDeOuf.txt
 	#---
 
 cat >> ${fichier_rst}  << BLOC
@@ -149,7 +150,8 @@ Mascotte personnelle
 ::
 
 BLOC
-cowsay -fd ./mascotte.cow "Je suis la mascotte de ${auteurs}" | awk '{printf " %-40s\n", $0}' >> ${fichier_rst}
+
+cowsay -f ./mascotte.cow "Je suis la mascotte de ${auteurs}" | awk '{printf " %-40s\n", $0}' >> ${fichier_rst}
 
 
 # Génération des formats HTML et PDF

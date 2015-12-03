@@ -76,34 +76,52 @@ Transformation bovine
 
 ::
 
-  _____________________________     : ~~~~~~~~~~~~~~~~~
+  _____________________________     : -----------------
  < Je suis une vache originale >    :< On m'a filtrée  >
-  -----------------------------     : ~~~~~~~~~~~~~~~~~
-         \   ^__^                   :        \   o~~o
-          \  (oo)\_______           :         \  {^^}\~~~~~~~
-             (__)\       )\/\       :            {~~}\       }\/\
-                 ||----w |          :                11~~~~w 1
+  -----------------------------     : -----------------
+         \   ^__^                   :        \   o--o
+          \  (oo)\_______           :         \  {^^}\-------
+             (__)\       )\/\       :            {--}\       }\/\
+                 ||----w |          :                11----w 1
                  ||     ||          :                11     11
 
 
 
 ::
 
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  : ~~~~~~~~~~~~~~~~~~~~~~~~
- < A m*i les n*uvelles mamelles ! > :{ Une queue de lapin ?!  }
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  : ------------------------
-         \   n~~n                   :        \   ^~~^
-          \  {**}\~~~~~~~           :         \  oooo\~~~~~~~
-             {~~}\       }\/\       :            o~~o\       o\/\
-                 11~~~~u 1          :                ||----w |
-                 11     11          :                ||     ||
+  --------------------------------  : ------------------------
+ < A moi les nouvelles mamelles ! > :{ Une queue de lapin ?!  }
+  --------------------------------  : ------------------------
+         \   n--n                   :        o   n--n
+          \  {**}\-------           :         o  {oO}\-------
+             {--}\       }\/\       :            {--}\       }@
+                 11---uu 1          :                11----w 1
+                 11     11          :                11     11
 
-Mascotte personnelle
+.. note::
+	**Attention !**
+
+	Veuillez noter que chaque ligne de chaque vignette doit commencer par un espace.
+::
+
+Ambition batracienne
 ====================
+
+C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**...
+
+.. sidebar:: Indications
+
+   	L\'option -f permet de choisir le personnage qui parle ou pense. Tous les fichiers sont
+	disponibles dans le dossier /usr/share/cowsay/cows/. #formater
+
 
 ::
 
-  ____________________________________   
- / Je suis la mascotte de A.Cambon et \  
- \ P.Fontaine                         /  
-  ------------------------------------   
+  ______________________________________
+ <  Je suis le plus gros des crapauds ! >
+  --------------------------------------
+         \   ^__^                   
+          \  (oo)\_______           
+             (__)\       )\/\       
+                 ||----w |          
+                 ||     ||          
