@@ -69,7 +69,6 @@ Quelques races bovines
 | La Normande_                                   | .. image:: http://i.imgur.com/2y9VGy8.jpg  |
 |				                 | 	:scale: 105%                          |
 +------------------------------------------------+--------------------------------------------+
-
 .. _Lourdaise: http://bit.ly/Race_Lourdaise
 .. _Normande: http://bit.ly/Race_Normande   
 
@@ -137,12 +136,29 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
 BLOC
 
 	cowsay " Je suis le plus gros des crapauds !"| awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
-	cowsay -f bud-frogs "" | awk '{printf " %-35s\n", $0}'>> ${fichier_rst}
+	cowsay -f bud-frogs " " | awk '{printf " %-35s\n", $0}'>> ${fichier_rst}
 
-	rm vacheDeOuf.txt
+
+	
 	#---
 
 cat >> ${fichier_rst}  << BLOC
+
+**Notez** que le message est lui-même ce que dit la vache \!
+
+Tableau de famille
+==================
+Voici quelques membres de la famille insérés dans un tableau RST.
+
++-------------------------------------------+-----------------------------------------+
+|::                                         |::                                       |
+|                                           |                                         |
+|BLOC                                       |BLOC                                     |
+|cowsay " "                                 |cowsay " "                               |
+| #---                        |
+| cat >> ${fichier_rst}  << BLOC       | cat >> ${fichier_rst}  << BLOC     |
+|La Maman                                   |La Tatie Web                             |
++-------------------------------------------+-----------------------------------------+
 
 Mascotte personnelle
 ====================
@@ -150,7 +166,6 @@ Mascotte personnelle
 ::
 
 BLOC
-
 cowsay -f ./mascotte.cow "Je suis la mascotte de ${auteurs}" | awk '{printf " %-40s\n", $0}' >> ${fichier_rst}
 
 
@@ -160,4 +175,4 @@ echo "Génération de ${fichier_html}"
 rst2html -d -t -s ${fichier_rst} ${fichier_html}
 
 echo "Génération de ${fichier_pdf}"
-rst2pdf ${fichier_rst} ${fichier_pdf}
+rst2pdf           ${fichier_rst} ${fichier_pdf}
