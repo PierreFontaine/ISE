@@ -50,7 +50,6 @@ Quelques races bovines
 | La Normande_                                   | .. image:: http://i.imgur.com/2y9VGy8.jpg  |
 |				                 | 	:scale: 105%                          |
 +------------------------------------------------+--------------------------------------------+
-
 .. _Lourdaise: http://bit.ly/Race_Lourdaise
 .. _Normande: http://bit.ly/Race_Normande   
 
@@ -117,11 +116,46 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
 
 ::
 
-  ______________________________________
- <  Je suis le plus gros des crapauds ! >
-  --------------------------------------
-         \   ^__^                   
-          \  (oo)\_______           
-             (__)\       )\/\       
-                 ||----w |          
-                 ||     ||          
+  _________________________________________
+ (  _____________________________________  )
+ ( < Je suis le plus gros des crapauds ! > )
+ (  -------------------------------------  )
+ (         \   ^__^                        )
+ (          \  (oo)\_______                )
+ (             (__)\       )\/\            )
+ (                 ||----w |               )
+ (                 ||     ||               )
+  -----------------------------------------
+      o                             
+       o                            
+           oO)-.                       .-(Oo
+          /__  _\                     /_  __\
+          \  \(  |     ()~()         |  )/  /
+           \__|\ |    (-___-)        | /|__/
+           '  '--'    ==`-'==        '--'  '
+
+**Notez** que le message est lui-même ce que dit la vache \!
+
+Tableau de famille
+==================
+Voici quelques membres de la famille insérés dans un tableau RST.
+
++-------------------------------------------+-----------------------------------------+
+|::                                         |::                                       |
+|                                           |                                         |
+|BLOC                                       |BLOC                                     |
+|cowsay " "                                 |cowsay " "                               |
+|                                           |                                         |
+| cat >> vaches_en_folie.rst  << BLOC       | cat >> vaches_en_folie.rst  << BLOC     |
+|La Maman                                   |La Tatie Web                             |
++-------------------------------------------+-----------------------------------------+
+
+Mascotte personnelle
+====================
+
+::
+
+  ____________________________________   
+ / Je suis la mascotte de A.Cambon et \  
+ \ P.Fontaine                         /  
+  ------------------------------------   

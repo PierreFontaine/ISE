@@ -134,9 +134,10 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
 ::
 
 BLOC
-
-	cowsay " Je suis le plus gros des crapauds !"| awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
-	cowsay -f bud-frogs " " | awk '{printf " %-35s\n", $0}'>> ${fichier_rst}
+	
+	cowsay "Je suis le plus gros des crapauds !" > vache3.txt
+	cat vache3.txt | cowthink -f bud-frogs -n | awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
+	rm vache3.txt
 
 
 	
@@ -155,7 +156,7 @@ Voici quelques membres de la famille insérés dans un tableau RST.
 |                                           |                                         |
 |BLOC                                       |BLOC                                     |
 |cowsay " "                                 |cowsay " "                               |
-| #---                        |
+|                                           |                                         |
 | cat >> ${fichier_rst}  << BLOC       | cat >> ${fichier_rst}  << BLOC     |
 |La Maman                                   |La Tatie Web                             |
 +-------------------------------------------+-----------------------------------------+
