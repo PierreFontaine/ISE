@@ -96,7 +96,7 @@ Transformation bovine
 
 BLOC
 cowsay "Je suis une vache originale" | awk '{printf " %-35s\n", $0}'  > vache0.txt
-cowsay "On m'a filtrée " | tr "_" "~" |tr "o" "x" | tr "^" "o" | tr "x" "^" | tr "|" "1" | tr "(" "{" | tr ")" "}" | tr "-" "~"| tr "~" "-"> vache1.txt
+cowsay "On m'a filtrée " | tr "_" "~" |tr "o" "x" | tr "^" "o" | tr "x" "^" | tr "|" "1" | tr "(" "{" | tr ")" "}" | tr "-" "~"> vache1.txt
 paste -d':' vache0.txt vache1.txt >> ${fichier_rst}
 #---
 cat >> ${fichier_rst}  << BLOC
@@ -106,8 +106,8 @@ cat >> ${fichier_rst}  << BLOC
 ::
 
 BLOC
-cowsay "A moi les nouvelles mamelles !" | awk '{printf " %-35s\n", $0}'|tr "-" "~" | tr "_" "~"| tr "(" "{" | tr ")" "}" | tr "|" "1" | tr "w" "u" | tr "^" "n" | sed s/oo/**/ | sed s/~~~~u/~~~uu/ |tr "~" "-"  > vache0.txt
-cowthink "Une queue de lapin ?! " | tr "_" "~" |tr "~" "-"| tr "^" "n" | sed s/oo/oO/ | cut -c '-26' | sed -e 's/\\/@/2' | tr '|' '1' | tr '(' '{' | tr ')' '}' > vache1.txt
+cowsay "A moi les nouvelles mamelles !" | awk '{printf " %-35s\n", $0}'|tr "-" "~" | tr "_" "~"| tr "(" "{" | tr ")" "}" | tr "|" "1" | tr "w" "u" | tr "^" "n" | sed s/oo/**/ | sed -e 's/~~~~u/~~~uu/'  > vache0.txt
+cowthink "Une queue de lapin ?! " | tr "_" "~" |tr "~" "-"| tr "^" "n" | sed s/oo/oO/ | cut -c '-26' | sed -e 's/\\/@/2' | tr '|' '1' | tr '(' '{' | tr ')' '}' | tr "-" "~" > vache1.txt
 paste -d':' vache0.txt vache1.txt >> ${fichier_rst}
 rm -f vache*.txt
 
@@ -163,6 +163,9 @@ Voici quelques membres de la famille insérés dans un tableau RST.
 
 Mascotte personnelle
 ====================
+
+Voici la mascotte que nous avons dessinée en ascii art et sauvegardée dans le fichier mascotte.cow
+en prenant exemple sur les fichiers disponibles dans le dossier /usr/share/cowsay/cows/
 
 ::
 

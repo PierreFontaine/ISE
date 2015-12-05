@@ -75,26 +75,26 @@ Transformation bovine
 
 ::
 
-  _____________________________     : -----------------
+  _____________________________     : ~~~~~~~~~~~~~~~~~
  < Je suis une vache originale >    :< On m'a filtrée  >
-  -----------------------------     : -----------------
-         \   ^__^                   :        \   o--o
-          \  (oo)\_______           :         \  {^^}\-------
-             (__)\       )\/\       :            {--}\       }\/\
-                 ||----w |          :                11----w 1
+  -----------------------------     : ~~~~~~~~~~~~~~~~~
+         \   ^__^                   :        \   o~~o
+          \  (oo)\_______           :         \  {^^}\~~~~~~~
+             (__)\       )\/\       :            {~~}\       }\/\
+                 ||----w |          :                11~~~~w 1
                  ||     ||          :                11     11
 
 
 
 ::
 
-  --------------------------------  : ------------------------
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  : ~~~~~~~~~~~~~~~~~~~~~~~~
  < A moi les nouvelles mamelles ! > :{ Une queue de lapin ?!  }
-  --------------------------------  : ------------------------
-         \   n--n                   :        o   n--n
-          \  {**}\-------           :         o  {oO}\-------
-             {--}\       }\/\       :            {--}\       }@
-                 11---uu 1          :                11----w 1
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  : ~~~~~~~~~~~~~~~~~~~~~~~~
+         \   n~~n                   :        o   n~~n
+          \  {**}\~~~~~~~           :         o  {oO}\~~~~~~~
+             {~~}\       }\/\       :            {~~}\       }@
+                 11~~~uu 1          :                11~~~~w 1
                  11     11          :                11     11
 
 .. note::
@@ -152,6 +152,9 @@ Voici quelques membres de la famille insérés dans un tableau RST.
 
 Mascotte personnelle
 ====================
+
+Voici la mascotte que nous avons dessinée en ascii art et sauvegardée dans le fichier mascotte.cow
+en prenant exemple sur les fichiers disponibles dans le dossier /usr/share/cowsay/cows/
 
 ::
 
