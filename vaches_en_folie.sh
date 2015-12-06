@@ -127,8 +127,8 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
 
 .. sidebar:: Indications
 
-   	L\'option -f permet de choisir le personnage qui parle ou pense. Tous les fichiers sont
-	disponibles dans le dossier /usr/share/cowsay/cows/. #formater
+   	L\'option \`\`-f\`\` permet de choisir le personnage qui parle ou pense. Tous les fichiers sont
+	disponibles dans le dossier \`\`/usr/share/cowsay/cows/\`\`.
 
 
 ::
@@ -136,7 +136,7 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
 BLOC
 	
 	cowsay "Je suis le plus gros des crapauds !" > vache3.txt
-	cat vache3.txt | cowthink -f bud-frogs -n | awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
+	cat vache3.txt | tr "w" "/" | cowthink -f bud-frogs -n | awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
 	rm vache3.txt
 
 
@@ -152,14 +152,22 @@ Tableau de famille
 Voici quelques membres de la famille insérés dans un tableau RST.
 
 +-------------------------------------------+-----------------------------------------+
-|::                                         |::                                       |
+|                                           |::                                       |
 |                                           |                                         |
-|BLOC                                       |BLOC                                     |
-|cowsay " "                                 |cowsay " "                               |
+|                                           |BLOC                                     |
+|cowsay "hello "                            |cowsay " "                               |
 |                                           |                                         |
 | cat >> ${fichier_rst}  << BLOC       | cat >> ${fichier_rst}  << BLOC     |
 |La Maman                                   |La Tatie Web                             |
 +-------------------------------------------+-----------------------------------------+
+|                                           |                                         |
+|                                           |                                         |
+|                                           |                                         |
+|                                           |                                         |
+|                                           |                                         |
+|                                           |                                         |
++-------------------------------------------+-----------------------------------------+
+
 
 Mascotte personnelle
 ====================

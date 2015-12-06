@@ -110,8 +110,8 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
 
 .. sidebar:: Indications
 
-   	L\'option -f permet de choisir le personnage qui parle ou pense. Tous les fichiers sont
-	disponibles dans le dossier /usr/share/cowsay/cows/. #formater
+   	L\'option ``-f`` permet de choisir le personnage qui parle ou pense. Tous les fichiers sont
+	disponibles dans le dossier ``/usr/share/cowsay/cows/``.
 
 
 ::
@@ -123,7 +123,7 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
  (         \   ^__^                        )
  (          \  (oo)\_______                )
  (             (__)\       )\/\            )
- (                 ||----w |               )
+ (                 ||----/ |               )
  (                 ||     ||               )
   -----------------------------------------
       o                             
@@ -142,9 +142,9 @@ Voici quelques membres de la famille insérés dans un tableau RST.
 
 +-------------------------------------------+-----------------------------------------+
 |::                                         |::                                       |
-|                                           |                                         |
-|BLOC                                       |BLOC                                     |
-|cowsay " "                                 |cowsay " "                               |
+|BLOC                                       |                                         |
+|                                           |BLOC                                     |
+|cowsay "hello "                            |cowsay " "                               |
 |                                           |                                         |
 | cat >> vaches_en_folie.rst  << BLOC       | cat >> vaches_en_folie.rst  << BLOC     |
 |La Maman                                   |La Tatie Web                             |
