@@ -135,24 +135,19 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
 
 Tableau de famille
 ==================
-Voici quelques membres de la famille insérés dans un tableau RST.
 
-+-------------------------------------------+-----------------------------------------+
-|                                           |::                                       |
-|                                           |                                         |
-|                                           |BLOC                                     |
-|cowsay "hello "                            |cowsay " "                               |
-|                                           |                                         |
-| cat >> vaches_en_folie.rst  << BLOC       | cat >> vaches_en_folie.rst  << BLOC     |
-|La Maman                                   |La Tatie Web                             |
-+-------------------------------------------+-----------------------------------------+
-|                                           |                                         |
-|                                           |                                         |
-|                                           |                                         |
-|                                           |                                         |
-|                                           |                                         |
-|                                           |                                         |
-+-------------------------------------------+-----------------------------------------+
+Voici quelques membres de la famille insérés dans un tableau RST.   
+
+
+.. list-table::
+   :widths: 20 20
+   :header-rows: 0
+
+ 
+   * - .. include:: vache3.txt ::
+     - 2.99
+   * - Crunchy Frog
+     - 1.49
 
 
 Mascotte personnelle

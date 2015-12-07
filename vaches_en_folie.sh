@@ -133,7 +133,6 @@ BLOC
 	
 	cowsay "Je suis le plus gros des crapauds !" > vache3.txt
 	cat vache3.txt | tr "w" "/" | cowthink -f bud-frogs -n | awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
-	rm vache3.txt
 
 
 	
@@ -145,24 +144,19 @@ cat >> ${fichier_rst}  << BLOC
 
 Tableau de famille
 ==================
-Voici quelques membres de la famille insérés dans un tableau RST.
 
-+-------------------------------------------+-----------------------------------------+
-|                                           |::                                       |
-|                                           |                                         |
-|                                           |BLOC                                     |
-|cowsay "hello "                            |cowsay " "                               |
-|                                           |                                         |
-| cat >> ${fichier_rst}  << BLOC       | cat >> ${fichier_rst}  << BLOC     |
-|La Maman                                   |La Tatie Web                             |
-+-------------------------------------------+-----------------------------------------+
-|                                           |                                         |
-|                                           |                                         |
-|                                           |                                         |
-|                                           |                                         |
-|                                           |                                         |
-|                                           |                                         |
-+-------------------------------------------+-----------------------------------------+
+Voici quelques membres de la famille insérés dans un tableau RST.   
+
+
+.. list-table::
+   :widths: 20 20
+   :header-rows: 0
+
+ 
+   * - .. include:: cowvache.txt
+     - 2.99
+   * - Crunchy Frog
+     - 1.49
 
 
 Mascotte personnelle
