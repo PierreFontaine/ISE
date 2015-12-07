@@ -134,6 +134,10 @@ BLOC
 	cowsay "Je suis le plus gros des crapauds !" > vache3.txt
 	cat vache3.txt | tr "w" "/" | cowthink -f bud-frogs -n | awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
 
+	echo "" | cowsay | tail -5 > maman.txt
+	echo "" | cowsay | tail -5 > tatie.txt
+	echo "" | cowsay | tail -5 > mamie.txt
+	echo "" | cowsay | tail -5 > soeur.txt
 
 	
 	#---
@@ -147,16 +151,23 @@ Tableau de famille
 
 Voici quelques membres de la famille insérés dans un tableau RST.   
 
++----------------------------------------------+----------------------------------------------+
+|.. include:: maman.txt                        |.. include:: tatie.txt                        |
+|	:code:                                 |	:code:                                |
+|                                              |                                              |
+|La Maman                                      |La Tatie Web                                  |
++----------------------------------------------+----------------------------------------------+
+|.. include:: maman.txt                        |.. include:: tatie.txt                        |
+|	:code:                                 |	:code:                                |
+|                                              |                                              |
+|La Maman                                      |La Tatie Web                                  |
++----------------------------------------------+----------------------------------------------+
 
-.. list-table::
-   :widths: 20 20
-   :header-rows: 0
+::
 
- 
-   * - .. include:: cowvache.txt
-     - 2.99
-   * - Crunchy Frog
-     - 1.49
+
+
+
 
 
 Mascotte personnelle
@@ -165,16 +176,19 @@ Mascotte personnelle
 Voici la mascotte que nous avons dessinée en ascii art et sauvegardée dans le fichier mascotte.cow
 en prenant exemple sur les fichiers disponibles dans le dossier /usr/share/cowsay/cows/
 
+
 ::
 
 BLOC
+
+
 cowsay -f ./mascotte.cow "Je suis la mascotte de ${auteurs}" | awk '{printf " %-40s\n", $0}' >> ${fichier_rst}
 
 
 # Génération des formats HTML et PDF
 
 echo "Génération de ${fichier_html}"
-rst2html.py -d -t -s ${fichier_rst} ${fichier_html}
+rst2html -d -t -s ${fichier_rst} ${fichier_html}
 
 echo "Génération de ${fichier_pdf}"
 rst2pdf           ${fichier_rst} ${fichier_pdf}

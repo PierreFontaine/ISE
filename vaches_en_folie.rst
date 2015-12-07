@@ -6,7 +6,7 @@ Projet d\'Introduction aux Systèmes d\'Exploitations
 ----------------------------------------------------
 
 :Auteurs: *A.Cambon et P.Fontaine*
-:Généré par: *pierrefontaine*
+:Généré par: *fontaine*
 
 Ce document a été généré  à partir du fichier ``vaches_en_folie.rst`` au
 format `reStructuredText`_ lui-même créé par le script
@@ -77,18 +77,18 @@ Transformation bovine
 
 ::
 
-  _____________________________     : ~~~~~~~~~~~~~~~~~~ 
+  _____________________________     : ~~~~~~~~~~~~~~~~~
  < Je suis une vache originale >    :< On m'a filtrée  >
-  -----------------------------     : ~~~~~~~~~~~~~~~~~~ 
+  -----------------------------     : ~~~~~~~~~~~~~~~~~
          \   ^__^                   :        \   o~~o
           \  (oo)\_______           :         \  {^^}\~~~~~~~
              (__)\       )\/\       :            {~~}\       }\/\
                  ||----w |          :                11~~~~w 1
                  ||     ||          :                11     11
  ........................................................................
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  : ~~~~~~~~~~~~~~~~~~~~~~~~ 
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  : ~~~~~~~~~~~~~~~~~~~~~~~~
  < A moi les nouvelles mamelles ! > :{ Une queue de lapin ?!  }
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  : ~~~~~~~~~~~~~~~~~~~~~~~~ 
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  : ~~~~~~~~~~~~~~~~~~~~~~~~
          \   n~~n                   :        o   n~~n
           \  {**}\~~~~~~~           :         o  {oO}\~~~~~~~
              {~~}\       }\/\       :            {~~}\       }@
@@ -113,7 +113,7 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
 
 ::
 
-  _________________________________________ 
+  _________________________________________
  (  _____________________________________  )
  ( < Je suis le plus gros des crapauds ! > )
  (  -------------------------------------  )
@@ -122,7 +122,7 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
  (             (__)\       )\/\            )
  (                 ||----/ |               )
  (                 ||     ||               )
-  ----------------------------------------- 
+  -----------------------------------------
       o                             
        o                            
            oO)-.                       .-(Oo
@@ -138,16 +138,23 @@ Tableau de famille
 
 Voici quelques membres de la famille insérés dans un tableau RST.   
 
++----------------------------------------------+----------------------------------------------+
+|.. include:: maman.txt                        |.. include:: tatie.txt                        |
+|	:code:                                 |	:code:                                |
+|                                              |                                              |
+|La Maman                                      |La Tatie Web                                  |
++----------------------------------------------+----------------------------------------------+
+|.. include:: maman.txt                        |.. include:: tatie.txt                        |
+|	:code:                                 |	:code:                                |
+|                                              |                                              |
+|La Maman                                      |La Tatie Web                                  |
++----------------------------------------------+----------------------------------------------+
 
-.. list-table::
-   :widths: 20 20
-   :header-rows: 0
+::
 
- 
-   * - .. include:: vache3.txt ::
-     - 2.99
-   * - Crunchy Frog
-     - 1.49
+
+
+
 
 
 Mascotte personnelle
@@ -155,6 +162,7 @@ Mascotte personnelle
 
 Voici la mascotte que nous avons dessinée en ascii art et sauvegardée dans le fichier mascotte.cow
 en prenant exemple sur les fichiers disponibles dans le dossier /usr/share/cowsay/cows/
+
 
 ::
 
