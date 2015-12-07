@@ -6,7 +6,7 @@ Projet d\'Introduction aux Systèmes d\'Exploitations
 ----------------------------------------------------
 
 :Auteurs: *A.Cambon et P.Fontaine*
-:Généré par: *fontaine*
+:Généré par: *pierrefontaine*
 
 Ce document a été généré  à partir du fichier ``vaches_en_folie.rst`` au
 format `reStructuredText`_ lui-même créé par le script
@@ -41,6 +41,7 @@ et des bouses. Vache se dit *cow* in English.
 
 Quelques races bovines
 ----------------------
+
 +------------------------------------------------+--------------------------------------------+
 | **Races et liens vers site web**               | **Images**                                 |
 +================================================+============================================+
@@ -50,6 +51,7 @@ Quelques races bovines
 | La Normande_                                   | .. image:: http://i.imgur.com/2y9VGy8.jpg  |
 |				                 | 	:scale: 105%                          |
 +------------------------------------------------+--------------------------------------------+
+
 .. _Lourdaise: http://bit.ly/Race_Lourdaise
 .. _Normande: http://bit.ly/Race_Normande   
 
@@ -75,22 +77,18 @@ Transformation bovine
 
 ::
 
-  _____________________________     : ~~~~~~~~~~~~~~~~~
+  _____________________________     : ~~~~~~~~~~~~~~~~~~ 
  < Je suis une vache originale >    :< On m'a filtrée  >
-  -----------------------------     : ~~~~~~~~~~~~~~~~~
+  -----------------------------     : ~~~~~~~~~~~~~~~~~~ 
          \   ^__^                   :        \   o~~o
           \  (oo)\_______           :         \  {^^}\~~~~~~~
              (__)\       )\/\       :            {~~}\       }\/\
                  ||----w |          :                11~~~~w 1
                  ||     ||          :                11     11
-
-
-
-::
-
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  : ~~~~~~~~~~~~~~~~~~~~~~~~
+ ........................................................................
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  : ~~~~~~~~~~~~~~~~~~~~~~~~ 
  < A moi les nouvelles mamelles ! > :{ Une queue de lapin ?!  }
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  : ~~~~~~~~~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  : ~~~~~~~~~~~~~~~~~~~~~~~~ 
          \   n~~n                   :        o   n~~n
           \  {**}\~~~~~~~           :         o  {oO}\~~~~~~~
              {~~}\       }\/\       :            {~~}\       }@
@@ -101,7 +99,6 @@ Transformation bovine
 	**Attention !**
 
 	Veuillez noter que chaque ligne de chaque vignette doit commencer par un espace.
-::
 
 Ambition batracienne
 ====================
@@ -116,7 +113,7 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
 
 ::
 
-  _________________________________________
+  _________________________________________ 
  (  _____________________________________  )
  ( < Je suis le plus gros des crapauds ! > )
  (  -------------------------------------  )
@@ -125,7 +122,7 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
  (             (__)\       )\/\            )
  (                 ||----/ |               )
  (                 ||     ||               )
-  -----------------------------------------
+  ----------------------------------------- 
       o                             
        o                            
            oO)-.                       .-(Oo
@@ -141,14 +138,22 @@ Tableau de famille
 Voici quelques membres de la famille insérés dans un tableau RST.
 
 +-------------------------------------------+-----------------------------------------+
-|::                                         |::                                       |
-|BLOC                                       |                                         |
+|                                           |::                                       |
+|                                           |                                         |
 |                                           |BLOC                                     |
 |cowsay "hello "                            |cowsay " "                               |
 |                                           |                                         |
 | cat >> vaches_en_folie.rst  << BLOC       | cat >> vaches_en_folie.rst  << BLOC     |
 |La Maman                                   |La Tatie Web                             |
 +-------------------------------------------+-----------------------------------------+
+|                                           |                                         |
+|                                           |                                         |
+|                                           |                                         |
+|                                           |                                         |
+|                                           |                                         |
+|                                           |                                         |
++-------------------------------------------+-----------------------------------------+
+
 
 Mascotte personnelle
 ====================

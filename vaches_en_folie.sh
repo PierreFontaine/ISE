@@ -60,6 +60,7 @@ et des bouses. Vache se dit *cow* in English.
 
 Quelques races bovines
 ----------------------
+
 +------------------------------------------------+--------------------------------------------+
 | **Races et liens vers site web**               | **Images**                                 |
 +================================================+============================================+
@@ -69,6 +70,7 @@ Quelques races bovines
 | La Normande_                                   | .. image:: http://i.imgur.com/2y9VGy8.jpg  |
 |				                 | 	:scale: 105%                          |
 +------------------------------------------------+--------------------------------------------+
+
 .. _Lourdaise: http://bit.ly/Race_Lourdaise
 .. _Normande: http://bit.ly/Race_Normande   
 
@@ -98,17 +100,12 @@ BLOC
 cowsay "Je suis une vache originale" | awk '{printf " %-35s\n", $0}'  > vache0.txt
 cowsay "On m'a filtrée " | tr "_" "~" |tr "o" "x" | tr "^" "o" | tr "x" "^" | tr "|" "1" | tr "(" "{" | tr ")" "}" | tr "-" "~"> vache1.txt
 paste -d':' vache0.txt vache1.txt >> ${fichier_rst}
-#---
-cat >> ${fichier_rst}  << BLOC
 
+echo "........................................................................" | awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
 
-
-::
-
-BLOC
-cowsay "A moi les nouvelles mamelles !" | awk '{printf " %-35s\n", $0}'|tr "-" "~" | tr "_" "~"| tr "(" "{" | tr ")" "}" | tr "|" "1" | tr "w" "u" | tr "^" "n" | sed s/oo/**/ | sed -e 's/~~~~u/~~~uu/'  > vache0.txt
-cowthink "Une queue de lapin ?! " | tr "_" "~" |tr "~" "-"| tr "^" "n" | sed s/oo/oO/ | cut -c '-26' | sed -e 's/\\/@/2' | tr '|' '1' | tr '(' '{' | tr ')' '}' | tr "-" "~" > vache1.txt
-paste -d':' vache0.txt vache1.txt >> ${fichier_rst}
+cowsay "A moi les nouvelles mamelles !" | awk '{printf " %-35s\n", $0}'|tr "-" "~" | tr "_" "~"| tr "(" "{" | tr ")" "}" | tr "|" "1" | tr "w" "u" | tr "^" "n" | sed s/oo/**/ | sed -e 's/~~~~u/~~~uu/'  > vache2.txt
+cowthink "Une queue de lapin ?! " | tr "_" "~" |tr "~" "-"| tr "^" "n" | sed s/oo/oO/ | cut -c '-26' | sed -e 's/\\/@/2' | tr '|' '1' | tr '(' '{' | tr ')' '}' | tr "-" "~" > vache3.txt
+paste -d':' vache2.txt vache3.txt >> ${fichier_rst}
 rm -f vache*.txt
 
 #---
@@ -118,7 +115,6 @@ cat >> ${fichier_rst}  << BLOC
 	**Attention !**
 
 	Veuillez noter que chaque ligne de chaque vignette doit commencer par un espace.
-::
 
 Ambition batracienne
 ====================
@@ -184,7 +180,7 @@ cowsay -f ./mascotte.cow "Je suis la mascotte de ${auteurs}" | awk '{printf " %-
 # Génération des formats HTML et PDF
 
 echo "Génération de ${fichier_html}"
-rst2html -d -t -s ${fichier_rst} ${fichier_html}
+rst2html.py -d -t -s ${fichier_rst} ${fichier_html}
 
 echo "Génération de ${fichier_pdf}"
 rst2pdf           ${fichier_rst} ${fichier_pdf}
