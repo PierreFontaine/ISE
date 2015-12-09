@@ -144,7 +144,7 @@ Voici quelques membres de la famille insérés dans un tableau RST.
 |                                              |                                              |
 |La Maman                                      |La Tatie Web                                  |
 +----------------------------------------------+----------------------------------------------+
-|.. include:: maman.txt                        |.. include:: tatie.txt                        |
+|.. include:: mamie.txt                        |.. include:: soeur.txt                        |
 |	:code:                                 |	:code:                                |
 |                                              |                                              |
 |La Maman                                      |La Tatie Web                                  |

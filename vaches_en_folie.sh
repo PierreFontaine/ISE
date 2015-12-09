@@ -135,9 +135,9 @@ BLOC
 	cat vache3.txt | tr "w" "/" | cowthink -f bud-frogs -n | awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
 
 	echo "" | cowsay | tail -5 |cut -c9-28 > maman.txt
-	echo "" | cowsay | tail -5 > tatie.txt
-	echo "" | cowsay | tail -5 > mamie.txt
-	echo "" | cowsay | tail -5 > soeur.txt
+	echo "" | cowsay -f www | tail -5 |cut -c9-28 > tatie.txt
+	echo "" | cowsay -f three-eyes| tail -8 |cut -c8-28 > mamie.txt
+	echo "" | cowsay -f moose| tail -8 |cut -c8-28 > soeur.txt
 
 	
 	#---
@@ -157,7 +157,7 @@ Voici quelques membres de la famille insérés dans un tableau RST.
 |                                              |                                              |
 |La Maman                                      |La Tatie Web                                  |
 +----------------------------------------------+----------------------------------------------+
-|.. include:: maman.txt                        |.. include:: tatie.txt                        |
+|.. include:: mamie.txt                        |.. include:: soeur.txt                        |
 |	:code:                                 |	:code:                                |
 |                                              |                                              |
 |La Maman                                      |La Tatie Web                                  |
