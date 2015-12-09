@@ -134,7 +134,7 @@ BLOC
 	cowsay "Je suis le plus gros des crapauds !" > vache3.txt
 	cat vache3.txt | tr "w" "/" | cowthink -f bud-frogs -n | awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
 
-	echo "" | cowsay | tail -5 > maman.txt
+	echo "" | cowsay | tail -5 |cut -c9-28 > maman.txt
 	echo "" | cowsay | tail -5 > tatie.txt
 	echo "" | cowsay | tail -5 > mamie.txt
 	echo "" | cowsay | tail -5 > soeur.txt
