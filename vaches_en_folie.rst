@@ -147,7 +147,7 @@ Voici quelques membres de la famille insérés dans un tableau RST.
 |.. include:: mamie.txt                        |.. include:: soeur.txt                        |
 |	:code:                                 |	:code:                                |
 |                                              |                                              |
-|La Maman                                      |La Tatie Web                                  |
+|La Mamie qui voit tout                        |La soeur(qui a eu des problèmes avec son mari)|
 +----------------------------------------------+----------------------------------------------+
 
 ::

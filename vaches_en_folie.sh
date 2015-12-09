@@ -136,8 +136,8 @@ BLOC
 
 	echo "" | cowsay | tail -5 |cut -c9-28 > maman.txt
 	echo "" | cowsay -f www | tail -5 |cut -c9-28 > tatie.txt
-	echo "" | cowsay -f three-eyes| tail -8 |cut -c8-28 > mamie.txt
-	echo "" | cowsay -f moose| tail -8 |cut -c8-28 > soeur.txt
+	echo "" | cowsay -f three-eyes|sed -e 's/--$/      \\/'| tail -6 |cut -c4-28 > mamie.txt
+	echo "" | cowsay -f moose| tail -8 |cut -c4-28 > soeur.txt
 
 	
 	#---
@@ -160,7 +160,7 @@ Voici quelques membres de la famille insérés dans un tableau RST.
 |.. include:: mamie.txt                        |.. include:: soeur.txt                        |
 |	:code:                                 |	:code:                                |
 |                                              |                                              |
-|La Maman                                      |La Tatie Web                                  |
+|La Mamie qui voit tout                        |La soeur(qui a eu des problèmes avec son mari)|
 +----------------------------------------------+----------------------------------------------+
 
 ::
