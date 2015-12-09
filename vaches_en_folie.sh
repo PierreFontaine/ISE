@@ -136,8 +136,8 @@ BLOC
 
 	echo "" | cowsay | tail -5 |cut -c9-28 > maman.txt
 	echo "" | cowsay -f www | tail -5 |cut -c9-28 > tatie.txt
-	echo "" | cowsay -f three-eyes|sed -e 's/--$/      \\/'| tail -6 |cut -c4-28 > mamie.txt
-	echo "" | cowsay -f moose| tail -8 |cut -c4-28 > soeur.txt
+	echo "" | cowsay -f three-eyes|sed -e 's/--$/      \\/'| tail -6 |cut -c8-28 > mamie.txt
+	echo "" | cowsay -f moose| tail -6 |cut -c4-28 > soeur.txt
 
 	
 	#---
