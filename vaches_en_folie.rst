@@ -6,7 +6,7 @@ Projet d\'Introduction aux Systèmes d\'Exploitations
 ----------------------------------------------------
 
 :Auteurs: *A.Cambon et P.Fontaine*
-:Généré par: *pfontaine001*
+:Généré par: *acambon*
 
 Ce document a été généré  à partir du fichier ``vaches_en_folie.rst`` au
 format `reStructuredText`_ lui-même créé par le script
@@ -34,7 +34,6 @@ et des bouses. Vache se dit *cow* in English.
 
 .. figure:: http://i.imgur.com/yIBMMzL.jpg
    :scale: 200 %
-   :alt: map to buried treasure
 
    **Figure :** Trois normandes devisent du sens de la vie sous les poiriers en fleurs.
 
@@ -120,7 +119,7 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
  (         \   ^__^                        )
  (          \  (oo)\_______                )
  (             (__)\       )\/\            )
- (                 ||----/ |               )
+ (                 ||----/||               )
  (                 ||     ||               )
   -----------------------------------------
       o                             
@@ -130,6 +129,7 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
           \  \(  |     ()~()         |  )/  /
            \__|\ |    (-___-)        | /|__/
            '  '--'    ==`-'==        '--'  '
+
 
 **Notez** que le message est lui-même ce que dit la vache \!
 
@@ -150,19 +150,11 @@ Voici quelques membres de la famille insérés dans un tableau RST.
 |La Mamie qui voit tout                        |La soeur(qui a eu des problèmes avec son mari)|
 +----------------------------------------------+----------------------------------------------+
 
-
-
-
-
-
-
-
 Mascotte personnelle
 ====================
 
-Voici la mascotte que nous avons dessinée en ascii art et sauvegardée dans le fichier mascotte.cow
-en prenant exemple sur les fichiers disponibles dans le dossier /usr/share/cowsay/cows/
-
+Voici la mascotte que nous avons dessinée en *ascii* art et sauvegardée dans le fichier ``mascotte.cow``
+en prenant exemple sur les fichiers disponibles dans le dossier ``/usr/share/cowsay/cows/``
 
 ::
 
@@ -170,3 +162,32 @@ en prenant exemple sur les fichiers disponibles dans le dossier /usr/share/cowsa
  / Je suis la mascotte de A.Cambon et \  
  \ P.Fontaine                         /  
   ------------------------------------   
+                                         
+                                 . . . . 
+                                 ,`,`,`,`,
+           . . . .               ````;   
+           `````,            ~|;!;!;!    
+            ~;;;\|          (--,!!!~`!       .
+           (--,\\===~         (--,|||~`!     ./
+            (--,\\===~         `,-,~,=,:. _,//
+             (--,\\==~`        ~-=~-.---|;/J,
+              (--,\((```==.    ~'`~/       a |
+                (-,.\('('(`\.  ~'=~|     _.    
+                   (,--(,(,(,'\. ~'=|       \_;>          
+                     (,-( ,(,(,;\ ~=/                            
+                     (,-/ (.(.(,;\,/          )
+                      (,--/,;,;,;,\         ./------.
+                        (==,-;-'`;'         /_,----`. 
+                ,.--_,__.-'                    `--.  ` 
+               (='~-_,--/        ,       ,!,___--.   _)
+              (-/~(     |            ,_-         | ) /_|
+              (~/((    )._,      |-'         _,/ /
+               \))))  /   ./~.    |           _;           
+            ,__/////  /   /    )  /      
+             '===~'   |  |    (, <.      
+                      / /       .        
+                    _/ /          _      
+                   /_!/            >_    
+                                         
+L\'évaluation tiendra compte de la qualité de la réalisation de la mascotte.
+

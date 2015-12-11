@@ -11,6 +11,7 @@ auteurs="A.Cambon et P.Fontaine"
 fichier_rst="vaches_en_folie.rst"
 fichier_html="vaches_en_folie.html"
 fichier_pdf="vaches_en_folie.pdf"
+fichier_mascotte="mascotte.cow"
 
 echo "Génération de ${fichier_rst}"
 
@@ -53,7 +54,6 @@ et des bouses. Vache se dit *cow* in English.
 
 .. figure:: http://i.imgur.com/yIBMMzL.jpg
    :scale: 200 %
-   :alt: map to buried treasure
 
    **Figure :** Trois normandes devisent du sens de la vie sous les poiriers en fleurs.
 
@@ -132,17 +132,51 @@ C\'est l\'histoire du crapaud qui rêvait de devenir aussi gros qu\'un **boeuf**
 BLOC
 	
 	cowsay "Je suis le plus gros des crapauds !" > vache3.txt
-	cat vache3.txt | tr "w" "/" | cowthink -f bud-frogs -n | awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
+	cat vache3.txt | sed -e 's/w /\/\|/' | cowthink -f bud-frogs -n | awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
 
-	echo "" | cowsay | tail -5 |cut -c9-28 > maman.txt
+	echo "" | cowsay |tail -5 |cut -c9-28 > maman.txt
 	echo "" | cowsay -f www | tail -5 |cut -c9-28 > tatie.txt
 	echo "" | cowsay -f three-eyes|sed -e 's/--$/      \\/'| tail -6 |cut -c8-28 > mamie.txt
 	echo "" | cowsay -f moose| tail -6 |cut -c4-28 > soeur.txt
 
-	
-	#---
+	echo "je créé une mascotte"
+cat > ${fichier_mascotte} << BLOC
+\$the_cow = <<"EOC";
+
+                                . . . .
+                                ,\`,\`,\`,\`,
+          . . . .               \`\\\`\\\`\\\`\\;
+          \`\\\`\\\`\\\`\\\`,            \~\|;!;!;\\!
+           \~\\;\\;\\;\\\|\\          (--,!!!\~\`!       .
+          (--,\\\\\\\=\=\=\~\\         (--,\|\|\|\~\`!     ./
+           (--,\\\\\\\=\=\=\~\\         \`,-,\~,\=,:. _,//
+            (--,\\\\\\\=\=\~\`\\        \~-\=\~-.---\|\\;/J,
+             (--,\\\\\\((\`\`\`\=\=.    \~\'\`\~/       a \|
+               (-,.\\\\(\'(\'(\`\\\\.  \~\'\=\~\|     \\_.  \\  
+                  (,--(,(,(,\'\\\\. \~\'\=\|       \\\\_;>          $thoughts
+                    (,-( ,(,(,;\\\\ \~\=/        \\                    $thoughts
+                    (,-/ (.(.(,;\\\\,/          )
+                     (,--/,;,;,;,\\\\         ./------.
+                       (\=\=,-;-\'\`;\'         /_,----\`. \\
+               ,.--_,__.-\'                    \`--.  \` \\
+              (\=\'\~-_,--/        ,       ,!,___--. \\  \\_)
+             (-/\~(     \|         \\   ,_-         \| ) /_\|
+             (\~/((\\    )\\._,      \|-\'         _,/ /
+              \\\\))))  /   ./\~.    \|           \\_\\;           
+           ,__/////  /   /    )  /
+            \'\=\=\=\~\'   \|  \|    (, <.
+                     / /       \\. \\
+                   _/ /          \\_\\
+                  /_!/            >_\\
+
+EOC
+
+BLOC
+
+
 
 cat >> ${fichier_rst}  << BLOC
+
 
 **Notez** que le message est lui-même ce que dit la vache \!
 
@@ -163,19 +197,11 @@ Voici quelques membres de la famille insérés dans un tableau RST.
 |La Mamie qui voit tout                        |La soeur(qui a eu des problèmes avec son mari)|
 +----------------------------------------------+----------------------------------------------+
 
-
-
-
-
-
-
-
 Mascotte personnelle
 ====================
 
-Voici la mascotte que nous avons dessinée en ascii art et sauvegardée dans le fichier mascotte.cow
-en prenant exemple sur les fichiers disponibles dans le dossier /usr/share/cowsay/cows/
-
+Voici la mascotte que nous avons dessinée en *ascii* art et sauvegardée dans le fichier \`\`mascotte.cow\`\`
+en prenant exemple sur les fichiers disponibles dans le dossier \`\`/usr/share/cowsay/cows/\`\`
 
 ::
 
@@ -184,6 +210,10 @@ BLOC
 
 cowsay -f ./mascotte.cow "Je suis la mascotte de ${auteurs}" | awk '{printf " %-40s\n", $0}' >> ${fichier_rst}
 
+cat >> ${fichier_rst}  << BLOC
+L\'évaluation tiendra compte de la qualité de la réalisation de la mascotte.
+
+BLOC
 
 # Génération des formats HTML et PDF
 
@@ -194,3 +224,4 @@ echo "Génération de ${fichier_pdf}"
 rst2pdf           ${fichier_rst} ${fichier_pdf}
 
 rm *.txt
+rm mascotte.cow
