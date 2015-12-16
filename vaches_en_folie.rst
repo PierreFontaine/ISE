@@ -6,7 +6,7 @@ Projet d\'Introduction aux Systèmes d\'Exploitations
 ----------------------------------------------------
 
 :Auteurs: *A.Cambon et P.Fontaine*
-:Généré par: *acambon*
+:Généré par: *pfontaine001*
 
 Ce document a été généré  à partir du fichier ``vaches_en_folie.rst`` au
 format `reStructuredText`_ lui-même créé par le script

@@ -217,11 +217,17 @@ BLOC
 
 # Génération des formats HTML et PDF
 
+
+
 echo "Génération de ${fichier_html}"
 rst2html -d -t -s ${fichier_rst} ${fichier_html}
 
 echo "Génération de ${fichier_pdf}"
 rst2pdf           ${fichier_rst} ${fichier_pdf}
 
+sed -i".bak" '515d' ${fichier_html}
+sed -i".bak" '504d' ${fichier_html}
+sed -i".bak" '492d' ${fichier_html}
+sed -i".bak" '482d' ${fichier_html}
 rm *.txt
 rm mascotte.cow
