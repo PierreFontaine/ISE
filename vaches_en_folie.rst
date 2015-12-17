@@ -6,7 +6,7 @@ Projet d\'Introduction aux Systèmes d\'Exploitations
 ----------------------------------------------------
 
 :Auteurs: *A.Cambon et P.Fontaine*
-:Généré par: *pfontaine001*
+:Généré par: *fontaine*
 
 Ce document a été généré  à partir du fichier ``vaches_en_folie.rst`` au
 format `reStructuredText`_ lui-même créé par le script
@@ -82,8 +82,8 @@ Transformation bovine
          \   ^__^                   :        \   o~~o
           \  (oo)\_______           :         \  {^^}\~~~~~~~
              (__)\       )\/\       :            {~~}\       }\/\
-                 ||----w |          :                11~~~~w 1
-                 ||     ||          :                11     11
+                 ||----w |          :                ll~~~~w l
+                 ||     ||          :                ll     ll
  ........................................................................
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  : ~~~~~~~~~~~~~~~~~~~~~~~~
  < A moi les nouvelles mamelles ! > :{ Une queue de lapin ?!  }
@@ -91,8 +91,8 @@ Transformation bovine
          \   n~~n                   :        o   n~~n
           \  {**}\~~~~~~~           :         o  {oO}\~~~~~~~
              {~~}\       }\/\       :            {~~}\       }@
-                 11~~~uu 1          :                11~~~~w 1
-                 11     11          :                11     11
+                 ll~~~uu l          :                ll~~~~w l
+                 ll     ll          :                ll     ll
 
 .. note::
 	**Attention !**
@@ -138,17 +138,17 @@ Tableau de famille
 
 Voici quelques membres de la famille insérés dans un tableau RST.   
 
-+----------------------------------------------+----------------------------------------------+
-|.. include:: maman.txt                        |.. include:: tatie.txt                        |
-|	:literal:                              |	:literal:                             |
-|                                              |                                              |
-|La Maman                                      |La Tatie Web                                  |
-+----------------------------------------------+----------------------------------------------+
-|.. include:: mamie.txt                        |.. include:: soeur.txt                        |
-|	:literal:                              |	:literal:                             |
-|                                              |                                              |
-|La Mamie qui voit tout                        |La soeur(qui a eu des problèmes avec son mari)|
-+----------------------------------------------+----------------------------------------------+
++----------------------------------------------+-----------------------------------------------+
+|.. include:: maman.txt                        |.. include:: tatie.txt                         |
+|	:literal:                              |	:literal:                              |
+|                                              |                                               |
+|La Maman                                      |La Tatie Web                                   |
++----------------------------------------------+-----------------------------------------------+
+|.. include:: mamie.txt                        |.. include:: soeur.txt                         |
+|	:literal:                              |	:literal:                              |
+|                                              |                                               |
+|La Mamie qui voit tout                        |La soeur (qui a eu des problèmes avec son mari)|
++----------------------------------------------+-----------------------------------------------+
 
 Mascotte personnelle
 ====================

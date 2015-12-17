@@ -140,6 +140,7 @@ BLOC
 	echo "" | cowsay -f moose| tail -6 |cut -c4-28 > soeur.txt
 
 	echo "je créé une mascotte"
+	
 cat > ${fichier_mascotte} << BLOC
 \$the_cow = <<"EOC";
 
@@ -191,11 +192,11 @@ Voici quelques membres de la famille insérés dans un tableau RST.
 |                                              |                                               |
 |La Maman                                      |La Tatie Web                                   |
 +----------------------------------------------+-----------------------------------------------+
-|.. include:: mamie.txt                        |.. include:: soeur.txt                        |
+|.. include:: mamie.txt                        |.. include:: soeur.txt                         |
 |	:literal:                              |	:literal:                              |
 |                                              |                                               |
 |La Mamie qui voit tout                        |La soeur (qui a eu des problèmes avec son mari)|
-+----------------------------------------------+----------------------------------------------+
++----------------------------------------------+-----------------------------------------------+
 
 Mascotte personnelle
 ====================
@@ -230,4 +231,5 @@ sed -i".bak" '504d' ${fichier_html}
 sed -i".bak" '492d' ${fichier_html}
 sed -i".bak" '482d' ${fichier_html}
 rm *.txt
+rm *.bak
 rm mascotte.cow
