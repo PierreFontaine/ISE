@@ -185,16 +185,16 @@ Tableau de famille
 
 Voici quelques membres de la famille insérés dans un tableau RST.   
 
-+----------------------------------------------+----------------------------------------------+
-|.. include:: maman.txt                        |.. include:: tatie.txt                        |
-|	:literal:                              |	:literal:                             |
-|                                              |                                              |
-|La Maman                                      |La Tatie Web                                  |
-+----------------------------------------------+----------------------------------------------+
++----------------------------------------------+-----------------------------------------------+
+|.. include:: maman.txt                        |.. include:: tatie.txt                         |
+|	:literal:                              |	:literal:                              |
+|                                              |                                               |
+|La Maman                                      |La Tatie Web                                   |
++----------------------------------------------+-----------------------------------------------+
 |.. include:: mamie.txt                        |.. include:: soeur.txt                        |
-|	:literal:                              |	:literal:                             |
-|                                              |                                              |
-|La Mamie qui voit tout                        |La soeur(qui a eu des problèmes avec son mari)|
+|	:literal:                              |	:literal:                              |
+|                                              |                                               |
+|La Mamie qui voit tout                        |La soeur (qui a eu des problèmes avec son mari)|
 +----------------------------------------------+----------------------------------------------+
 
 Mascotte personnelle
@@ -217,11 +217,17 @@ BLOC
 
 # Génération des formats HTML et PDF
 
+
+
 echo "Génération de ${fichier_html}"
 rst2html -d -t -s ${fichier_rst} ${fichier_html}
 
 echo "Génération de ${fichier_pdf}"
 rst2pdf           ${fichier_rst} ${fichier_pdf}
 
+sed -i".bak" '515d' ${fichier_html}
+sed -i".bak" '504d' ${fichier_html}
+sed -i".bak" '492d' ${fichier_html}
+sed -i".bak" '482d' ${fichier_html}
 rm *.txt
 rm mascotte.cow
