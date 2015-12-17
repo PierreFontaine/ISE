@@ -98,13 +98,13 @@ Transformation bovine
 
 BLOC
 cowsay "Je suis une vache originale" | awk '{printf " %-35s\n", $0}'  > vache0.txt
-cowsay "On m'a filtrée " | tr "_" "~" |tr "o" "x" | tr "^" "o" | tr "x" "^" | tr "|" "1" | tr "(" "{" | tr ")" "}" | tr "-" "~"> vache1.txt
+cowsay "On m'a filtrée " | tr "_" "~" |tr "o" "x" | tr "^" "o" | tr "x" "^" | tr "|" "l" | tr "(" "{" | tr ")" "}" | tr "-" "~"> vache1.txt
 paste -d':' vache0.txt vache1.txt >> ${fichier_rst}
 
 echo "........................................................................" | awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
 
-cowsay "A moi les nouvelles mamelles !" | awk '{printf " %-35s\n", $0}'|tr "-" "~" | tr "_" "~"| tr "(" "{" | tr ")" "}" | tr "|" "1" | tr "w" "u" | tr "^" "n" | sed s/oo/**/ | sed -e 's/~~~~u/~~~uu/'  > vache2.txt
-cowthink "Une queue de lapin ?! " | tr "_" "~" |tr "~" "-"| tr "^" "n" | sed s/oo/oO/ | cut -c '-26' | sed -e 's/\\/@/2' | tr '|' '1' | tr '(' '{' | tr ')' '}' | tr "-" "~" > vache3.txt
+cowsay "A moi les nouvelles mamelles !" | awk '{printf " %-35s\n", $0}'|tr "-" "~" | tr "_" "~"| tr "(" "{" | tr ")" "}" | tr "|" "l" | tr "w" "u" | tr "^" "n" | sed s/oo/**/ | sed -e 's/~~~~u/~~~uu/'  > vache2.txt
+cowthink "Une queue de lapin ?! " | tr "_" "~" |tr "~" "-"| tr "^" "n" | sed s/oo/oO/ | cut -c '-26' | sed -e 's/\\/@/2' | tr '|' 'l' | tr '(' '{' | tr ')' '}' | tr "-" "~" > vache3.txt
 paste -d':' vache2.txt vache3.txt >> ${fichier_rst}
 rm -f vache*.txt
 
@@ -134,7 +134,7 @@ BLOC
 	cowsay "Je suis le plus gros des crapauds !" > vache3.txt
 	cat vache3.txt | sed -e 's/w /\/\|/' | cowthink -f bud-frogs -n | awk '{printf " %-35s\n", $0}' >> ${fichier_rst}
 
-	echo "" | cowsay |tail -5 |cut -c9-28 > maman.txt
+	echo "" | cowsay |tail -5|cut -c9-28 > maman.txt
 	echo "" | cowsay -f www | tail -5 |cut -c9-28 > tatie.txt
 	echo "" | cowsay -f three-eyes|sed -e 's/--$/      \\/'| tail -6 |cut -c8-28 > mamie.txt
 	echo "" | cowsay -f moose| tail -6 |cut -c4-28 > soeur.txt
